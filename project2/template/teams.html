@@ -1,0 +1,30 @@
+{% extends 'common.html' %}
+{% block content %}
+<div class="container">
+     <div class="row mt-5">
+          {% for player in teams %}
+          <div class="col-3 mt-3">
+               <div
+                    class="card {% if player.team_name == 'Team A' %} text-bg-warning {% else %} text-bg-primary {% endif %}">
+                    <div class="card-header h2">{{player.name}} </div>
+                    <div class="card-body">
+                         Runs : - {{player.runs}}
+                         <br>
+                         Matches : - {{player.matches}}
+                    </div>
+               </div>
+          </div>
+          {% endfor %}
+          <!-- <div class="col-3">
+               <div class="card text-bg-primary">
+                    <div class="card-header h2">Player 1 </div>
+                    <div class="card-body">
+                         Runs : - 1000
+                         <br>
+                         Matches : - 10
+                    </div>
+               </div>
+          </div> -->
+     </div>
+</div>
+{% endblock %}

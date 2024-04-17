@@ -1,0 +1,40 @@
+{% extends 'common.html' %}
+{% block content %}
+<div class="container">
+     <div class="row">
+          <div class="col-8 offset-2">
+               <div class="card mt-5 shadow ">
+                    <div class="card-header text-bg-primary h2 ">
+                         Student data
+                    </div>
+                    <div class="card-body">
+                         <div class="table-responsive">
+                              <table class="table table-bordered table-striped table-hover">
+                                   <thead>
+                                        <th>Sr no</th>
+                                        <th>Name</th>
+                                        <th>Age</th>
+                                        <th>Gender</th>
+                                        <th>Photo</th>
+                                        <th>Mobile Number </th>
+                                   </thead>
+                                   <tbody>
+                                        {% for value in student_data %}
+                                        <tr>
+                                             <td>{{value.id}}</td>
+                                             <td>{{value.name}}</td>
+                                             <td>{{value.age}}</td>
+                                             <td>{% if value.gender == True %} Male {% else %} Female {% endif %}</td>
+                                             <td><img src=media/{{value.photo}} height="75px" alt=""></td>
+                                             <td>{{value.mobile}}</td>
+                                        </tr>
+                                        {% endfor %}
+                                   </tbody>
+                              </table>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
+{% endblock %}

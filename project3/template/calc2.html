@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container">
+     <div class="row">
+          <div class="col-8 offset-2">
+               <div class="card mt-5 shadow">
+                    <div class="card-header h2 text-bg-primary">
+                         Calc2
+                    </div>
+                    <div class="card-body">
+                         <form action="result_post" method="post">
+                              {% csrf_token %}
+                              <div class="form-group">
+                                   <label for="" class="form-label">Enter number 1 </label>
+                                   <input type="number" class="form-control" name="num1" id=""
+                                        placeholder="Enter value of number 1">
+                              </div>
+                              <div class="form-group mt-3">
+                                   <label for="" class="form-label">Enter number 2 </label>
+                                   <input type="number" class="form-control" name="num2" id=""
+                                        placeholder="Enter value of number 2">
+                              </div>
+                              <div class="text-end mt-3">
+                                   <input type="submit" name="option" class="btn btn-success" value="Addition"></input>
+                                   <input type="submit" name="option" class="btn btn-success" value="Subtraction"></input>
+                                   <input type="submit" name="option" class="btn btn-success" value="Multiplication"></input>
+                                   <input type="submit" name="option" class="btn btn-success" value="Division"></input>
+                              </div>
+                         </form>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
+{% endblock %}

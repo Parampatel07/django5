@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Bootstrap demo</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+
+     <div class="container">
+          <div class="row">
+               <div class="col-12 mt-3">
+                    <h1 align="center">
+                         Example of Sliding method in Jquery
+                    </h1>
+                    <hr>
+                    <p class="lead rounded shadow p-3 my-3 text-bg-primary">
+                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam corporis quibusdam, rerum
+                         repudiandae harum aspernatur architecto eaque asperiores doloremque vitae! Animi laborum
+                         incidunt dignissimos sapiente quod harum molestias, error mollitia.
+                    </p>
+                    <p class="lead rounded shadow p-3 my-3 text-bg-danger">
+                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam corporis quibusdam, rerum
+                         repudiandae harum aspernatur architecto eaque asperiores doloremque vitae! Animi laborum
+                         incidunt dignissimos sapiente quod harum molestias, error mollitia.
+                    </p>
+                    <p class="lead rounded shadow p-3 my-3 text-bg-warning">
+                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam corporis quibusdam, rerum
+                         repudiandae harum aspernatur architecto eaque asperiores doloremque vitae! Animi laborum
+                         incidunt dignissimos sapiente quod harum molestias, error mollitia.
+                    </p>
+                    <p class="lead rounded shadow p-3 my-3 text-bg-success">
+                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam corporis quibusdam, rerum
+                         repudiandae harum aspernatur architecto eaque asperiores doloremque vitae! Animi laborum
+                         incidunt dignissimos sapiente quod harum molestias, error mollitia.
+                    </p>
+                    <div class="text-end mt-3">
+                         <button id="slideup" class="btn btn-success">Slide Up</button>
+                         <button id="slidedown" class="btn btn-danger">Slide Down</button>
+                         <button id="slidetoggle" class="btn btn-primary">Slide Toggle </button>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+     <script src="https://code.jquery.com/jquery-3.7.1.js"
+          integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+     <script>
+          $(document).ready(function () {
+               console.log("Jquery working ");
+               $("#slideup").click(function () {
+                    $('p').slideUp(1500);
+               });
+
+               $("#slidedown").click(function () {
+                    $('p').slideDown(1500);
+               });
+
+               $("#slidetoggle").click(function () {
+                    $('p').slideToggle(1500);
+               });
+          });
+     </script>
+</body>
+
+</html>

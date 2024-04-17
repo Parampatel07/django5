@@ -1,0 +1,44 @@
+{% extends 'common.html' %}
+{% block content %}
+<div class="container">
+     <div class="row">
+          <div class="col-4">
+               <div class="card mt-5 shadow text-bg-success">
+                    <div class="card-header">
+                         <h2>Mobile Number </h2>
+                    </div>
+                    <div class="card-body">
+                         Lorem ipsum dolor sit amet consectetur adipisicing.
+                         <br>
+                         <b>
+                              {{phone}}
+                         </b>
+                    </div>
+               </div>
+          </div>
+          <div class="col-4">
+               <div class="card mt-5 shadow text-bg-success">
+                    <div class="card-header">
+                         <h2>Email </h2>
+                    </div>
+                    <div class="card-body">
+                         Lorem ipsum dolor sit amet consectetur adipisicing.
+                         <br>
+                         <b>{{email}}</b>
+                    </div>
+               </div>
+          </div>
+          <div class="col-4">
+               <div class="card mt-5 shadow text-bg-success h-75">
+                    <div class="card-header">
+                         <h2>Address </h2>
+                    </div>
+                    <div class="card-body">
+                         {{ address }}
+                         <br>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
+{% endblock %}

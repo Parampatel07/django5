@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          p {
+               font-size: 1.5rem;
+               background-color: rgb(188, 255, 188);
+               padding: 20px;
+               margin: 20px;
+               border-radius: 30px;
+          }
+
+          #hide_button {
+               padding: 10px;
+               border-radius: 30px;
+               color: white;
+               background-color: rgb(43, 43, 206);
+               width: 100px;
+          }
+
+          #show_button {
+               padding: 10px;
+               border-radius: 30px;
+               color: white;
+               background-color: rgb(43, 111, 43);
+               width: 100px;
+          }
+     </style>
+</head>
+
+<body>
+
+     <h1 align="center">
+          Example 1 of Jquery
+     </h1>
+     <hr>
+
+     <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, nostrum, ratione atque, fuga non debitis
+          ullam ab quod aut iusto consectetur praesentium nobis fugiat quo neque magni blanditiis necessitatibus labore?
+     </p>
+
+     <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, nostrum, ratione atque, fuga non debitis
+          ullam ab quod aut iusto consectetur praesentium nobis fugiat quo neque magni blanditiis necessitatibus labore?
+     </p>
+
+     <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, nostrum, ratione atque, fuga non debitis
+          ullam ab quod aut iusto consectetur praesentium nobis fugiat quo neque magni blanditiis necessitatibus labore?
+     </p>
+
+     <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, nostrum, ratione atque, fuga non debitis
+          ullam ab quod aut iusto consectetur praesentium nobis fugiat quo neque magni blanditiis necessitatibus labore?
+     </p>
+
+     <div align="center">
+          <button class="button" id="hide_button">Hide </button>
+          <button class="button" id="show_button">Show </button>
+     </div>
+
+     <script src="https://code.jquery.com/jquery-3.7.1.js"
+          integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+     <script>
+
+          $(document).ready(function () {
+               console.log("Jquery Working ");
+
+               $("#hide_button").click(function () {
+                    console.log("Hide button clicked ");
+                    $('p').hide(1000)
+               });
+
+               $("#show_button").click(function () {
+                    $('p').show(1000);
+               });
+
+               $('p').click(function () {
+                    $(this).hide(1000);
+               });
+          });
+
+     </script>
+</body>
+
+</html>
