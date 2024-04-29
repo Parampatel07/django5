@@ -1,0 +1,49 @@
+{% extends 'template.html' %}
+{% block content %}
+<div class="container">
+     <div class="row">
+          <div class="col-6 offset-3">
+               <div class="card my-5">
+                    <div class="modal-dialog modal-dialog-centered">
+                         <div class="modal-content p-4">
+                              <div class="modal-header border-0">
+                                   <h5 class="modal-title fs-3 fw-bold" id="userModalLabel">Login </h5>
+                              </div>
+                              <div class="modal-body">
+                                   <form action="check_login" method="post">
+                                        {% csrf_token %}
+                                        <div class="mb-3 mt-3">
+                                             <label for="email" class="form-label">Email address</label>
+                                             <input type="email" class="form-control" id="email"
+                                                  placeholder="Enter Email address" name="email" required="" />
+                                        </div>
+                                        <div class="mb-3">
+                                             <label for="password" class="form-label">Password</label>
+                                             <input type="password" class="form-control" id="password"
+                                                  placeholder="Enter Password" name="password" required="" />
+                                        </div>
+                                        <div class="mb-3 mt-1">
+                                             <small class="form-text">
+                                                  <a href="forgot_password.html">Forgot Password</a>
+                                             </small>
+                                        </div>
+                                        <div class="text-end">
+                                             <button type="submit" class="btn btn-primary">Login </button>
+                                        </div>
+                                   </form>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
+<script>
+     let url = window.location.href;
+     let input = window.location.href.substring(window.location.href.lastIndexOf("=") + 1);
+     console.log(input);
+     if (input == 0) {
+          alert("Invalid Login Attempt ")
+     }
+</script>
+{% endblock %}

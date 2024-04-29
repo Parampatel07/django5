@@ -1,0 +1,43 @@
+{% extends 'template.html' %}
+{% block content %}
+<div class="bg-light d-flex justify-content-between ps-md-10 ps-6 rounded">
+     <div class="d-flex align-items-center">
+          <h1 class="mb-0 fw-bold">Shop by Category</h1>
+     </div>
+     <div class="py-6">
+          <!-- img -->
+          <!-- img -->
+          <img src="https://freshcart.codescandy.com/assets/images/svg-graphics/store-graphics.svg" alt=""
+               class="img-fluid">
+     </div>
+</div>
+<!-- section -->
+<section class="my-lg-14 my-8">
+     <!-- category -->
+     <div class="container">
+          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-6 g-6">
+               <!-- col -->
+               {% for value in data %}
+               <div class="col">
+                    <a href="/shop/product/{{value.id}}" class="text-decoration-none text-inherit">
+                         <!-- card -->
+                         <div class="card card-product" style="max-height: 300px;min-height: 300px;">
+                              <div class="card-body text-center py-8">
+                                   <!-- img -->
+                                   <img src="/media/{{value.image}}"
+                                        style="min-height: 200px;max-height: 200px;min-width: 200px;max-width: 200px;"
+                                        alt="Grocery Ecommerce Template" class="mb-3" />
+                                   <!-- text -->
+                                   <div class="text-truncate">{{value.name}}</div>
+                              </div>
+                         </div>
+                    </a>
+               </div>
+               {% endfor %}
+               <!-- col -->
+          </div>
+     </div>
+</section>
+<!-- section -->
+
+{% endblock %}

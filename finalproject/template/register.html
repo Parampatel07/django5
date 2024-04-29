@@ -1,0 +1,67 @@
+{% extends 'template.html' %}
+{% block content %}
+<div class="container">
+     <div class="row">
+          <div class="card my-5 p-5">
+               <h2 class="text-center mb-5">
+                    Register With Us
+               </h2>
+               <div class="offset-lg-2 col-lg-8 col-12">
+                    <form class="row needs-validation" action="add_user" method="post">
+                         {% csrf_token %}
+                         <!-- input -->
+                         <div class="col-md-4 mb-3">
+                              <label class="form-label" for="contactFName">
+                                   Enter your name
+                                   <span class="text-danger">*</span>
+                              </label>
+                              <input type="text" id="contactFName" class="form-control" name="name"
+                                   placeholder="Enter Your First Name" required="" value="Jhon">
+                              <div class="invalid-feedback">Please enter name.</div>
+                         </div>
+                         <div class="col-md-4 mb-3">
+                              <!-- input -->
+                              <label class="form-label" for="contactLName">
+                                   Enter your Mobile number
+                                   <span class="text-danger">*</span>
+                              </label>
+                              <input type="number" min="999999999" id="contactLName" class="form-control" name="phone"
+                                   placeholder="Enter Your Last name" required="" value="Doe">
+                              <div class="invalid-feedback">Please enter mobile number.</div>
+                         </div>
+                         <div class="col-md-4 mb-3">
+                              <!-- input -->
+                              <label class="form-label" for="contactLName">
+                                   Enter your age
+                                   <span class="text-danger">*</span>
+                              </label>
+                              <input type="number" id="contactLName" class="form-control" name="age"
+                                   placeholder="Enter Your Last name" required="" value="Doe">
+                              <div class="invalid-feedback">Please enter Age.</div>
+                         </div>
+                         <div class="col-md-6 mb-3">
+                              <label class="form-label" for="contactEmail">
+                                   Enter your Email
+                                   <span class="text-danger">*</span>
+                              </label>
+                              <input type="email" id="contactEmail" name="email" class="form-control"
+                                   placeholder="Enter Your First Name" required="" value="jhon@gmail.com">
+                              <div class="invalid-feedback">Please enter email.</div>
+                         </div>
+                         <div class="col-md-6 mb-3">
+                              <!-- input -->
+                              <label class="form-label" for="contactPhone">Enter your Password</label>
+                              <input type="password" id="contactPhone" name="password" class="form-control"
+                                   placeholder="Your Phone Number" required="" value="1234567890">
+                              <div class="invalid-feedback">Please enter password.</div>
+                         </div>
+                         <div class="col-12 text-center">
+                              <button type="submit" class="btn btn-primary">Save Change </button>
+                         </div>
+                    </form>
+               </div>
+          </div>
+     </div>
+
+</div>
+{% endblock %}
