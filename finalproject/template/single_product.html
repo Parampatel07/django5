@@ -32,14 +32,14 @@
                               <div class="col-xxl-4 col-lg-4 col-md-5 col-5 d-grid">
                                    <!-- button -->
                                    <!-- btn -->
-                                   <a href="cart.html" class="btn btn-primary">
+                                   <a href="/shop/add_product_to_cart/{{value.id}}/{{value.price}}" id="addToCart" class="btn btn-primary">
                                         <i class="feather-icon icon-shopping-bag me-2"></i>
                                         Add to cart
                                    </a>
                               </div>
                               <div class="col-md-4 col-4">
                                    <!-- btn -->
-                                   <a href="wishlist.html" class="btn btn-outline-info">
+                                   <a href="/shop/add_to_wishlist/{{value.id}}" class="btn btn-outline-info">
                                         <i class="bi bi-heart"></i> Add to Wishlist
                                    </a>
                               </div>
@@ -133,5 +133,22 @@
           </div>
           {% endfor %}
      </div>
+     <script>
+          function getCookie(name) {
+               var name = name + "=";
+               var decodedCookie = decodeURIComponent(document.cookie);
+               var ca = decodedCookie.split(';');
+               for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                         c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                         return c.substring(name.length, c.length);
+                    }
+               }
+               return "";
+          }
+     </script>
 </div>
 {% endblock %}

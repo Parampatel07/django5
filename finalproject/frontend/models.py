@@ -39,3 +39,7 @@ class orders(models.Model):
      state = models.CharField(max_length=56)
      description = models.TextField()
      mode_of_payment = models.IntegerField()
+
+class wishlist(models.Model):
+     userid = models.IntegerField()
+     productid = models.IntegerField()
